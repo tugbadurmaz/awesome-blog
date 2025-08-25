@@ -1,0 +1,111 @@
+:root {
+    --tub: #1A2A80;
+}
+
+.text-tub {
+    color: var(--tub);
+}
+
+.bg-tub {
+    background-color: var(--tub);
+}
+
+.btn-tub {
+    background-color: var(--tub);
+    color: white;
+}
+
+.navbar {
+    background-color: #1A2A80 !important;
+}
+
+.btn-outline-tub {
+    color: var(--tub);
+    border: 2px solid var(--tub);
+    background-color: transparent;
+    transition: 0.3s ease;
+}
+
+.btn-outline-tub:hover {
+    background-color: var(--tub);
+    color: white;
+}
+
+.bg-dark {
+    background-color: #1A2A80 !important;
+}
+
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-toggle {
+    display: none;
+}
+
+.clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.expand-card .card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.card-toggle:checked+.card .clamp {
+    -webkit-line-clamp: unset;
+    overflow: visible;
+}
+
+.card-toggle:checked+.card {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+}
+
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    will-change: transform;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05) translateY(-5px);
+}
+
+
+.card-img-fixed {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    max-height: 200px;
+}
+
+#map {
+    height: 450px;
+}
+
+@media (min-width: 768px) {
+    .card-img-top {
+        height: 32vh;
+    }
+
+    #map {
+        height: 100%;
+    }
+}
